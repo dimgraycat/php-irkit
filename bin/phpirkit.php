@@ -42,8 +42,9 @@ function getIrkitArgs($values) {
 }
 
 function phpIrkitDefaultHelp($argv, $cli) {
+    $hash = exec('git rev-parse HEAD');
     $cli->description(
-        'phpirkit version '.Cli::greenText(IrkitClient::VERSION)."\n".
+        'phpirkit version '.Cli::greenText(IrkitClient::VERSION).".{$hash}\n".
         "IRKit Device HTTP API Commander\n".
         "See: http://getirkit.com/en/"
     )

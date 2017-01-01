@@ -13,7 +13,6 @@ class Runner {
     private $config = [];
 
     public function __construct($command, $dir) {
-        $file = $this->files[$command];
         foreach(['config', $command] as $key) {
             if (!array_key_exists($key, $this->files)) {
                 continue;

@@ -38,7 +38,7 @@ class DeviceClient {
             return $res->getBody();
         }
         catch (ConnectException $e) {
-            echo Cli::redText('http request timeout. set timeout: '.$this->config['timeout'].' Sec');
+            echo Cli::redText($e->getMessage());
         }
         catch (IrkitException $e) {
             echo Cli::redText($e->getMessage());
