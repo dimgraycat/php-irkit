@@ -1,0 +1,29 @@
+{
+    "directories": ["src", "vendor"],
+    "main": "bin/phpirkit.php",
+    "output": "build/phpirkit.phar",
+    "finder":[{
+        "exclude": [
+            "test",
+            "composer.json",
+            "composer.lock",
+            "config.json",
+            "messages.json",
+            "box.json"
+        ],
+        "in": [
+            "src",
+            "vendor/composer",
+            "vendor/guzzlehttp",
+            "vendor/psr",
+            "vendor/vanilla"
+        ]
+    }],
+    "files": [
+        "LICENSE",
+        "vendor/autoload.php"
+    ],
+    "git-version": "git-version",
+    "chmod": "0755",
+    "stub": true
+}
