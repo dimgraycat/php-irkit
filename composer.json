@@ -1,8 +1,8 @@
 {
     "name": "dimgraycat/irkit",
     "type": "library",
-    "description": "The irkit api Request",
-    "keywords": ["framework"],
+    "description": "IRKit Device HTTP API Commander",
+    "keywords": ["framework", "irkit", "client"],
     "homepage": "http://github.com/dimgraycat/php-irkit",
     "license": "MIT",
     "authors":[
@@ -14,8 +14,11 @@
     "require": {
         "php": "^5.6 || ^7.0",
         "guzzlehttp/guzzle": "6.2.*",
-        "phpunit/phpunit": "5.7.*",
         "vanilla/garden-cli": "^1.6"
+    },
+    "require-dev": {
+        "ext-curl": "*",
+        "phpunit/phpunit": "^5.7"
     },
     "autoload": {
         "psr-4": {
