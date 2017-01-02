@@ -28,8 +28,8 @@ class DeviceClient {
 
     public function send($uri, array $options = []) {
         try {
-            $this->config = array_merge($this->config, ['json' => $options]);
-            $res = $this->post($uri, $this->config);
+            $config = array_merge($this->config, ['json' => $options]);
+            $res = $this->post($uri, $config);
             if ($res->getStatusCode() != 200) {
                 throw new IrkitException(
                     'Transmission failed. The status code is '.$res->getStatusCode().'.'

@@ -1,7 +1,4 @@
 {
-    "php": {
-        "timezone": "Asia/Tokyo"
-    },
     "http": {
         "base_uri": "COMMENT: you IRKit's IP address.",
         "base_uri": "http://192.168.11.26/",

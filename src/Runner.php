@@ -9,8 +9,8 @@ class Runner {
         'messages'  => 'messages.json',
     ];
 
-    private static $instance, $irkit;
-    private $config = [];
+    protected static $instance, $irkit;
+    protected $config = [];
 
     public function __construct($command, $dir) {
         foreach(['config', $command] as $key) {
@@ -21,18 +21,15 @@ class Runner {
                 $dir, $this->files[$key]
             ]);
             $realPath = realpath($filePath);
-            $json = file_get_contents(realpath($filePath));
+            $json = file_get_contents($filePath);
             $this->config = array_merge($this->config, json_decode($json, true));
-        }
-        if (isset($this->config['php']) && isset($this->config['php']['timezone'])) {
-            date_default_timezone_set($this->config['php']['timezone']);
         }
     }
 
     public static function execute($command, $dir, array $args = []) {
         self::$instance = new self($command, $dir);
         self::$irkit = new DeviceClient(self::$instance->config['http']);
-        self::$instance->$command($args);
+        return self::$instance->$command($args);
     }
 
     protected function messages($args) {
@@ -43,6 +40,7 @@ class Runner {
             $message = json_encode($settings[$name][$power]);
             self::$irkit->send('messages', ['message' => $message]);
         }
+        return true;
     }
 
     protected function keys() {
