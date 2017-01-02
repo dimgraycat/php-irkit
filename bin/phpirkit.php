@@ -16,6 +16,12 @@ switch ($argv[1]) {
     case '--help':
         phpIrkitDefaultHelp($argv, $cli);
         break;
+    case 'config':
+        $res = phpIrkitConfigGenerator($argv, $cli);
+        Irkit\Config::create(
+            $res->getOpt('ip-address', '127.0.0.1')
+        );
+        break;
     case 'messages':
         $res = phpIrkitMessages($argv, $cli);
         break;
@@ -47,10 +53,21 @@ function phpIrkitDefaultHelp($argv, $cli) {
         "IRKit Device HTTP API Commander\n".
         "See: http://getirkit.com/en/"
     )
+        ->arg('config', "[<options>] <args>\n--help\t show config command help.", true)
         ->arg('messages', "[<options>] <args>\n--help\t show messages command help.", true)
         ->arg('keys', "get clienttoken", true);
     $cli->parse($argv, true);
     exit(1);
+}
+
+function phpIrkitConfigGenerator($argv, $cli) {
+    if (!isset($argv[2])) {
+        $argv[2] = '--help';
+    }
+    $cli->command('config')
+        ->description('create create.json and messages.json.')
+        ->opt('ip-address:i', 'Specify the IP address of your IRKit.', true);
+    return $cli->parse($argv, true);
 }
 
 function phpIrkitKeys($cli) {

@@ -1,0 +1,10 @@
+{
+  "delay": "COMMENT: delay mSec",
+  "delay": 1000,
+  "settings": {
+    "COMMENT: The following is sample.": {
+      "on": "IR on signal.",
+      "off": "IR off signal."
+    }
+  }
+}

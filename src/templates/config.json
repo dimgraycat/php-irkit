@@ -1,0 +1,9 @@
+{
+  "http": {
+    "base_uri": "COMMENT: you IRKit's IP address.",
+    "base_uri": "http://{{ ipAddress }}/",
+
+    "timeout": "Float describing the timeout of the request in seconds.(default: 2.0)",
+    "timeout": 60.0
+  }
+}
