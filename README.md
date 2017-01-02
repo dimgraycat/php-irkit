@@ -22,9 +22,9 @@ $ mkdir /var/phpirkit
 $ mv config.json /var/phpirkit/
 $ mv messages.json /var/phpirkit/
 
-$ php phpirkit --help
-$ php phpirkit keys -d /var/phpirkit/
-$ php phpirkit messages -d /var/phpirkit/ --help
+$ phpirkit --help
+$ phpirkit keys -d /var/phpirkit/
+$ phpirkit messages -d /var/phpirkit/ --help
 ```
 
 You can also immediately use the PHAR after you have downloaded it, of course:
