@@ -2,9 +2,10 @@
 
 IRKit Device HTTP API Commander.
 
-[![License](http://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://github.com/dimgraycat/php-irkit/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-mit-blue.svg?style=flat-square)](https://github.com/dimgraycat/php-irkit/blob/master/LICENSE)
 [![Latest Stable Version](https://img.shields.io/packagist/v/dimgraycat/phpirkit.svg?style=flat-square)](https://packagist.org/packages/dimgraycat/phpirkit)
 [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/)
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=flat-square)](https://travis-ci.org/dimgraycat/php-irkit)
 
 ## Installation
 
