@@ -1,38 +1,9 @@
 <?php
 namespace Irkit\Test;
 
-use GuzzleHttp\Client as HttpClient;
-use Irkit\DeviceClient as IrkitClient;
+use Irkit\Test\HttpClientTest;
+use Irkit\Test\IrkitClientTest;
 use PHPUnit\Framework\TestCase;
-
-class HttpClientTest extends HttpClient {
-    private $__statusCode;
-    public function post($uri, $config) {
-        return $this;
-    }
-    public function setStatusCode($code) {
-        $this->__statusCode = $code;
-    }
-    public function getStatusCode() {
-        return $this->__statusCode;
-    }
-    public function getBody() {
-        return 'success';
-    }
-}
-
-class IrkitClientTest extends IrkitClient {
-    public $config = [];
-    public $client;
-    public function __construct(array $config = []) {
-        $this->config   = array_merge($this->config, $this->headers);
-        $this->config   = array_merge($this->config, $config);
-        $this->client   = new HttpClientTest($this->config);
-    }
-    public function post($uri, array $config) {
-        return parent::post($uri, $config);
-    }
-}
 
 class IrkitDeviceClientTest extends TestCase {
     public function testInstance() {
