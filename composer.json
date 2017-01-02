@@ -1,33 +1,38 @@
 {
-    "name": "dimgraycat/phpirkit",
-    "type": "library",
-    "description": "IRKit Device HTTP API Commander",
-    "keywords": ["framework", "irkit", "client"],
-    "homepage": "http://github.com/dimgraycat/php-irkit",
-    "license": "MIT",
-    "authors":[
-        {
-            "name": "dimgraycat",
-            "email": "dimgray.cat@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^5.6 || ^7.0",
-        "guzzlehttp/guzzle": "6.2.*",
-        "vanilla/garden-cli": "^1.6"
-    },
-    "require-dev": {
-        "ext-curl": "*",
-        "phpunit/phpunit": "^5.7"
-    },
-    "autoload": {
-        "psr-4": {
-            "Irkit\\": "src/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0.x-dev"
-        }
+  "name": "dimgraycat/phpirkit",
+  "type": "library",
+  "description": "IRKit Device HTTP API Commander",
+  "keywords": ["framework", "irkit", "client"],
+  "homepage": "http://github.com/dimgraycat/php-irkit",
+  "license": "MIT",
+  "authors":[
+    {
+      "name": "dimgraycat",
+      "email": "dimgray.cat@gmail.com"
     }
+  ],
+  "require": {
+    "php": "^5.6 || ^7.0",
+    "guzzlehttp/guzzle": "6.2.*",
+    "vanilla/garden-cli": "^1.6"
+  },
+  "require-dev": {
+    "ext-curl": "*",
+    "phpunit/phpunit": "^5.7"
+  },
+  "autoload": {
+    "psr-4": {
+      "Irkit\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Irkit\\Test\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0.x-dev"
+    }
+  }
 }

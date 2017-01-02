@@ -1,9 +1,9 @@
 {
-    "http": {
-        "base_uri": "COMMENT: you IRKit's IP address.",
-        "base_uri": "http://192.168.11.26/",
+  "http": {
+    "base_uri": "COMMENT: you IRKit's IP address.",
+    "base_uri": "http://192.168.11.26/",
 
-        "timeout": "Float describing the timeout of the request in seconds.(default: 2.0)",
-        "timeout": 60.0
-    }
+    "timeout": "Float describing the timeout of the request in seconds.(default: 2.0)",
+    "timeout": 60.0
+  }
 }

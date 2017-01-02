@@ -1,6 +1,6 @@
 {
-    "http": {
-        "base_uri": "http://127.0.0.1/",
-        "timeout": 2.0
-    }
+  "http": {
+    "base_uri": "http://127.0.0.1/",
+    "timeout": 2.0
+  }
 }
