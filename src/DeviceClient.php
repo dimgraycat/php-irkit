@@ -7,7 +7,7 @@ use GuzzleHttp\Exception\ConnectException;
 use Irkit\Exception as IrkitException;
 
 class DeviceClient {
-    const VERSION = '0.5.1';
+    const VERSION = '1.0.0';
 
     protected $headers = [
         'timeout'   => 2.0,
