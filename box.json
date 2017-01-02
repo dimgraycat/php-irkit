@@ -4,6 +4,7 @@
     "output": "build/phpirkit.phar",
     "finder":[{
         "exclude": [
+            "sample",
             "test",
             "composer.json",
             "composer.lock",

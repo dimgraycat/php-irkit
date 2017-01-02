@@ -10,6 +10,7 @@ IRKit Device HTTP API Commander.
 ## Installation
 
 We distribute a [PHP Archive (PHAR)](https://php.net/phar) that has all required (as well as some optional) dependencies of PHPIrkit bundled in a single file:
+See: [Sample Settings](https://github.com/dimgraycat/php-irkit/tree/master/sample)
 
 ```bash
 $ wget https://raw.github.com/dimgraycat/php-irkit/master/build/phpirkit.phar
@@ -18,7 +19,6 @@ $ chmod +x phpirkit.phar
 
 $ mv phpirkit.phar /usr/local/bin/phpirkit
 $ phpirkit config --help
-
 $ mkdir /var/phpirkit
 $ mv config.json /var/phpirkit/
 $ mv messages.json /var/phpirkit/
@@ -35,4 +35,3 @@ $ wget https://raw.github.com/dimgraycat/php-irkit/master/build/phpirkit.phar
 
 $ php phpirkit.phar config --help
 $ php phpirkit.phar --help
-```
