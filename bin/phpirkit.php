@@ -54,7 +54,8 @@ function phpIrkitDefaultHelp($argv, $cli) {
 }
 
 function phpIrkitKeys($cli) {
-    $cli->command('keys');
+    $cli->command('keys')
+        ->opt('dir:d', 'If specified, use the given directory as working directory.', false);
     return $cli->parse();
 }
 

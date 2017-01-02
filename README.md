@@ -11,16 +11,28 @@ We distribute a [PHP Archive (PHAR)](https://php.net/phar) that has all required
 
 ```bash
 $ wget https://raw.github.com/dimgraycat/php-irkit/master/build/phpirkit.phar
+$ wget https://raw.github.com/dimgraycat/php-irkit/master/config.json
+$ wget https://raw.github.com/dimgraycat/php-irkit/master/messages.json
 
 $ chmod +x phpirkit.phar
 
 $ mv phpirkit.phar /usr/local/bin/phpirkit
+
+$ mkdir /var/phpirkit
+$ mv config.json /var/phpirkit/
+$ mv messages.json /var/phpirkit/
+
+$ php phpirkit --help
+$ php phpirkit keys -d /var/phpirkit/
+$ php phpirkit messages -d /var/phpirkit/ --help
 ```
 
 You can also immediately use the PHAR after you have downloaded it, of course:
 
 ```bash
 $ wget https://raw.github.com/dimgraycat/php-irkit/master/build/phpirkit.phar
+$ wget https://raw.github.com/dimgraycat/php-irkit/master/config.json
+$ wget https://raw.github.com/dimgraycat/php-irkit/master/messages.json
 
-$ php phpirkit.phar
+$ php phpirkit.phar --help
 ```
